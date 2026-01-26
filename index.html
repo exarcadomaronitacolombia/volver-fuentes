@@ -1,0 +1,138 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Volver a las Fuentes – Teología Patrística</title>
+<style>
+:root{
+ --bg:#6d3c55; --overlay:rgba(0,0,0,.55);
+ --card:rgba(255,255,255,.08); --text:#ffffff; --muted:#f0d7e3;
+ --line:rgba(255,255,255,.25); --cta:#ffffff; --ctaText:#4a2436;
+ --radius:18px; --max:1100px;
+ font-family:system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial;
+}
+*{box-sizing:border-box}
+body{
+ margin:0;color:var(--text);
+ background:
+ linear-gradient(var(--overlay),var(--overlay)),
+ url('fondo.jpg') center/cover no-repeat fixed;
+}
+.container{max-width:var(--max);margin:auto;padding:32px}
+.card{
+ background:var(--card);
+ border:1px solid var(--line);
+ border-radius:var(--radius);
+ padding:24px;
+ margin-bottom:24px;
+ backdrop-filter: blur(4px);
+}
+h1,h2,h3{margin-top:0}
+.grid{display:grid;grid-template-columns:1fr 1fr;gap:20px}
+@media(max-width:900px){.grid{grid-template-columns:1fr}}
+.btn{
+ display:inline-block;background:var(--cta);color:var(--ctaText);
+ padding:14px 20px;border-radius:999px;
+ font-weight:700;text-decoration:none;margin-top:12px;
+}
+input,select{
+ width:100%;padding:12px;border-radius:10px;
+ border:1px solid var(--line);background:rgba(0,0,0,.3);color:white;
+}
+label{font-size:14px}
+.footer{font-size:13px;opacity:.85}
+img.logo{max-width:280px;margin-bottom:12px}
+img.speaker{width:140px;border-radius:50%}
+</style>
+</head>
+
+<body>
+<div class="container">
+
+<div class="card" style="text-align:center">
+<img src="logo_color.png" class="logo" alt="Volver a las Fuentes">
+<h1>Volver a las Fuentes</h1>
+<h3>Doctrina cristiana a la luz de los Padres de la Iglesia</h3>
+<p>Inicio: <strong>12 de febrero de 2026</strong></p>
+<a href="#registro" class="btn">Inscribirme</a>
+</div>
+
+<div class="card">
+<h2>Información del curso</h2>
+<ul>
+<li>Modalidad: presencial y virtual</li>
+<li>Horario: martes y jueves, 8:00 a 9:45 p.m.</li>
+<li>Duración: 30 sesiones – 2 horas académicas</li>
+<li>No se requiere formación previa</li>
+</ul>
+</div>
+
+<div class="card">
+<h2>Inversión</h2>
+<p>
+<strong>COP $500.000</strong> (USD 140) hasta el <strong>1 de febrero de 2026</strong><br>
+<strong>COP $600.000</strong> (USD 170) después del 1 de febrero<br>
+<strong>Fecha límite de inscripción:</strong> 10 de febrero de 2026
+</p>
+
+<h3>Forma de pago</h3>
+<p>
+Consignación bancaria:<br>
+<strong>Banco:</strong> Bancolombia<br>
+<strong>Cuenta de ahorros:</strong> 18060891989<br>
+<strong>NIT:</strong> 900976504-3<br>
+<strong>Titular:</strong> Exarcado Maronita Santa Rafqa de Colombia
+</p>
+</div>
+
+<div class="card">
+<h2>Expositores</h2>
+<div class="grid">
+<div>
+<img src="padre_estefano.jpg" class="speaker">
+<p><strong>Padre Estéfano</strong><br>Sacerdote católico maronita – Teólogo</p>
+</div>
+<div>
+<img src="carlos_corredor.jpg" class="speaker">
+<p><strong>Carlos Corredor</strong><br>Teólogo – Historiador</p>
+</div>
+<div>
+<img src="alejandra_alba.jpg" class="speaker">
+<p><strong>Alejandra Alba</strong><br>Historiadora – Estudios socioculturales</p>
+</div>
+</div>
+</div>
+
+<div class="card" id="registro">
+<h2>Formulario de inscripción</h2>
+<form action="https://formsubmit.co/jovenesdesancharbel@gmail.com" method="POST">
+<input type="hidden" name="_subject" value="Inscripción Volver a las Fuentes">
+<input type="hidden" name="_captcha" value="false">
+
+<label>Nombre completo
+<input type="text" name="Nombre" required></label>
+
+<label>País
+<input type="text" name="País" required></label>
+
+<label>Ciudad
+<input type="text" name="Ciudad" required></label>
+
+<label>Correo electrónico
+<input type="email" name="Email" required></label>
+
+<label>Teléfono
+<input type="tel" name="Teléfono" required></label>
+
+<button class="btn" type="submit">Enviar inscripción</button>
+</form>
+</div>
+
+<div class="footer card">
+Al enviar este formulario aceptas el tratamiento de tus datos personales conforme a la legislación vigente.
+</div>
+
+</div>
+</body>
+</html>
