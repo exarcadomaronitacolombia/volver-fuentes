@@ -1,138 +1,287 @@
 <!doctype html>
 <html lang="es">
 <head>
-<meta charset="utf-8"/>
-<meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>Volver a las Fuentes – Teología Patrística</title>
-<style>
-:root{
- --bg:#6d3c55; --overlay:rgba(0,0,0,.55);
- --card:rgba(255,255,255,.08); --text:#ffffff; --muted:#f0d7e3;
- --line:rgba(255,255,255,.25); --cta:#ffffff; --ctaText:#4a2436;
- --radius:18px; --max:1100px;
- font-family:system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial;
-}
-*{box-sizing:border-box}
-body{
- margin:0;color:var(--text);
- background:
- linear-gradient(var(--overlay),var(--overlay)),
- url('fondo.jpg') center/cover no-repeat fixed;
-}
-.container{max-width:var(--max);margin:auto;padding:32px}
-.card{
- background:var(--card);
- border:1px solid var(--line);
- border-radius:var(--radius);
- padding:24px;
- margin-bottom:24px;
- backdrop-filter: blur(4px);
-}
-h1,h2,h3{margin-top:0}
-.grid{display:grid;grid-template-columns:1fr 1fr;gap:20px}
-@media(max-width:900px){.grid{grid-template-columns:1fr}}
-.btn{
- display:inline-block;background:var(--cta);color:var(--ctaText);
- padding:14px 20px;border-radius:999px;
- font-weight:700;text-decoration:none;margin-top:12px;
-}
-input,select{
- width:100%;padding:12px;border-radius:10px;
- border:1px solid var(--line);background:rgba(0,0,0,.3);color:white;
-}
-label{font-size:14px}
-.footer{font-size:13px;opacity:.85}
-img.logo{max-width:280px;margin-bottom:12px}
-img.speaker{width:140px;border-radius:50%}
-</style>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+
+  <title>Volver a las Fuentes – Teología Patrística</title>
+  <meta name="description" content="Curso de teología patrística: doctrina cristiana a la luz de los Padres de la Iglesia. Modalidad presencial y virtual. Inicia 12 de febrero de 2026.">
+
+  <!-- Canonical (importante para SEO y campañas) -->
+  <link rel="canonical" href="https://exarcadomaronitacolombia.github.io/volver-fuentes/">
+
+  <!-- Favicon (usa el logo existente; no necesitas subir nada nuevo) -->
+  <link rel="icon" href="logo_color.png">
+
+  <!-- Open Graph (previsualización en WhatsApp/Facebook) -->
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="es_CO">
+  <meta property="og:title" content="Volver a las Fuentes – Teología Patrística">
+  <meta property="og:description" content="Doctrina cristiana a la luz de los Padres de la Iglesia. Presencial y virtual. Inicia 12 de febrero de 2026.">
+  <meta property="og:url" content="https://exarcadomaronitacolombia.github.io/volver-fuentes/">
+  <meta property="og:image" content="https://exarcadomaronitacolombia.github.io/volver-fuentes/logo_color.png">
+
+  <!-- Twitter Cards -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Volver a las Fuentes – Teología Patrística">
+  <meta name="twitter:description" content="Doctrina cristiana a la luz de los Padres de la Iglesia. Presencial y virtual. Inicia 12 de febrero de 2026.">
+  <meta name="twitter:image" content="https://exarcadomaronitacolombia.github.io/volver-fuentes/logo_color.png">
+
+  <style>
+    :root{
+      --bg:#6d3c55; --overlay:rgba(0,0,0,.55);
+      --card:rgba(255,255,255,.08); --text:#ffffff; --muted:#f0d7e3;
+      --line:rgba(255,255,255,.25); --cta:#ffffff; --ctaText:#4a2436;
+      --radius:18px; --max:1100px;
+      font-family:system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial;
+    }
+    *{box-sizing:border-box}
+    body{
+      margin:0;color:var(--text);
+      background:
+        linear-gradient(var(--overlay),var(--overlay)),
+        url('fondo.jpg') center/cover no-repeat fixed;
+    }
+    .container{max-width:var(--max);margin:auto;padding:32px}
+    .card{
+      background:var(--card);
+      border:1px solid var(--line);
+      border-radius:var(--radius);
+      padding:24px;
+      margin-bottom:24px;
+      backdrop-filter: blur(4px);
+    }
+    h1,h2,h3{margin-top:0}
+    .grid{display:grid;grid-template-columns:1fr 1fr;gap:20px}
+    @media(max-width:900px){.grid{grid-template-columns:1fr}}
+    .btn{
+      display:inline-block;background:var(--cta);color:var(--ctaText);
+      padding:14px 20px;border-radius:999px;
+      font-weight:800;text-decoration:none;margin-top:12px;
+      border:0; cursor:pointer;
+    }
+    .btn.secondary{
+      background:transparent;
+      color:var(--text);
+      border:1px solid var(--line);
+      font-weight:700;
+    }
+    .btnRow{display:flex;gap:12px;justify-content:center;flex-wrap:wrap}
+    .muted{color:var(--muted)}
+    .pill{
+      display:inline-block;
+      padding:6px 10px;
+      border-radius:999px;
+      border:1px solid var(--line);
+      background:rgba(0,0,0,.18);
+      font-size:13px;
+      margin:6px 6px 0 0;
+    }
+
+    input,select{
+      width:100%;padding:12px;border-radius:10px;
+      border:1px solid var(--line);background:rgba(0,0,0,.3);color:white;
+      margin-top:6px;
+    }
+    label{font-size:14px;display:block;margin-top:12px}
+    .footer{font-size:13px;opacity:.9}
+    img.logo{max-width:280px;margin-bottom:12px}
+    img.speaker{width:140px;border-radius:50%;border:1px solid var(--line)}
+    .success{
+      border:1px solid rgba(255,255,255,.35);
+      background:rgba(0,0,0,.25);
+      padding:12px 14px;
+      border-radius:12px;
+      margin:14px 0 0;
+      font-weight:650;
+    }
+
+    /* Barra CTA fija (móvil) */
+    .stickyCta{
+      position:fixed;
+      left:0; right:0; bottom:0;
+      padding:12px;
+      background:rgba(0,0,0,.55);
+      backdrop-filter: blur(6px);
+      border-top:1px solid var(--line);
+      display:none;
+      z-index:9999;
+    }
+    .stickyCta .inner{
+      max-width:var(--max);
+      margin:0 auto;
+      display:flex;
+      gap:10px;
+    }
+    .stickyCta a{
+      flex:1;
+      text-align:center;
+      padding:14px 14px;
+      border-radius:999px;
+      text-decoration:none;
+      font-weight:800;
+    }
+    .stickyCta a.primary{background:var(--cta); color:var(--ctaText)}
+    .stickyCta a.secondary{background:transparent; color:var(--text); border:1px solid var(--line)}
+    @media(max-width:900px){
+      .container{padding:18px 18px 90px} /* deja espacio por la barra */
+      .stickyCta{display:block;}
+    }
+  </style>
 </head>
 
 <body>
-<div class="container">
+  <!-- Barra fija (solo móvil) -->
+  <div class="stickyCta" aria-label="Acciones rápidas">
+    <div class="inner">
+      <a class="primary" href="#registro">Inscribirme</a>
+      <a class="secondary" target="_blank" rel="noopener"
+         href="https://wa.me/573154485881?text=Hola%20Laura,%20quiero%20inscribirme%20al%20curso%20Volver%20a%20las%20Fuentes.%20%C2%BFMe%20ayudas%20por%20favor%3F">
+        WhatsApp
+      </a>
+    </div>
+  </div>
 
-<div class="card" style="text-align:center">
-<img src="logo_color.png" class="logo" alt="Volver a las Fuentes">
-<h1>Volver a las Fuentes</h1>
-<h3>Doctrina cristiana a la luz de los Padres de la Iglesia</h3>
-<p>Inicio: <strong>12 de febrero de 2026</strong></p>
-<a href="#registro" class="btn">Inscribirme</a>
-</div>
+  <div class="container">
 
-<div class="card">
-<h2>Información del curso</h2>
-<ul>
-<li>Modalidad: presencial y virtual</li>
-<li>Horario: martes y jueves, 8:00 a 9:45 p.m.</li>
-<li>Duración: 30 sesiones – 2 horas académicas</li>
-<li>No se requiere formación previa</li>
-</ul>
-</div>
+    <div class="card" style="text-align:center">
+      <img src="logo_color.png" class="logo" alt="Volver a las Fuentes">
+      <h1>Volver a las Fuentes</h1>
+      <h3 class="muted">Doctrina cristiana a la luz de los Padres de la Iglesia</h3>
 
-<div class="card">
-<h2>Inversión</h2>
-<p>
-<strong>COP $500.000</strong> (USD 140) hasta el <strong>1 de febrero de 2026</strong><br>
-<strong>COP $600.000</strong> (USD 170) después del 1 de febrero<br>
-<strong>Fecha límite de inscripción:</strong> 10 de febrero de 2026
-</p>
+      <div>
+        <span class="pill">Inicio: <strong>12 de febrero de 2026</strong></span>
+        <span class="pill">Modalidad: presencial y virtual</span>
+        <span class="pill">Mar/Jue 8:00–9:45 p.m.</span>
+      </div>
 
-<h3>Forma de pago</h3>
-<p>
-Consignación bancaria:<br>
-<strong>Banco:</strong> Bancolombia<br>
-<strong>Cuenta de ahorros:</strong> 18060891989<br>
-<strong>NIT:</strong> 900976504-3<br>
-<strong>Titular:</strong> Exarcado Maronita Santa Rafqa de Colombia
-</p>
-</div>
+      <div class="btnRow" style="margin-top:10px">
+        <a href="#registro" class="btn">Inscribirme</a>
+        <a class="btn secondary" target="_blank" rel="noopener"
+           href="https://wa.me/573154485881?text=Hola%20Laura,%20quiero%20m%C3%A1s%20informaci%C3%B3n%20del%20curso%20Volver%20a%20las%20Fuentes.%20%C2%BFMe%20ayudas%20por%20favor%3F">
+          WhatsApp: información e inscripción
+        </a>
+      </div>
+    </div>
 
-<div class="card">
-<h2>Expositores</h2>
-<div class="grid">
-<div>
-<img src="padre_estefano.jpg" class="speaker">
-<p><strong>Padre Estéfano</strong><br>Sacerdote católico maronita – Teólogo</p>
-</div>
-<div>
-<img src="carlos_corredor.jpg" class="speaker">
-<p><strong>Carlos Corredor</strong><br>Teólogo – Historiador</p>
-</div>
-<div>
-<img src="alejandra_alba.jpg" class="speaker">
-<p><strong>Alejandra Alba</strong><br>Historiadora – Estudios socioculturales</p>
-</div>
-</div>
-</div>
+    <div class="card">
+      <h2>Información del curso</h2>
+      <ul>
+        <li>Modalidad: presencial y virtual</li>
+        <li>Horario: martes y jueves, 8:00 a 9:45 p.m.</li>
+        <li>Duración: 30 sesiones – 2 horas académicas</li>
+        <li>No se requiere formación previa</li>
+      </ul>
+    </div>
 
-<div class="card" id="registro">
-<h2>Formulario de inscripción</h2>
-<form action="https://formsubmit.co/jovenesdesancharbel@gmail.com" method="POST">
-<input type="hidden" name="_subject" value="Inscripción Volver a las Fuentes">
-<input type="hidden" name="_captcha" value="false">
+    <div class="card">
+      <h2>Inversión</h2>
+      <p>
+        <strong>COP $500.000</strong> (USD 140) hasta el <strong>1 de febrero de 2026</strong><br>
+        <strong>COP $600.000</strong> (USD 170) después del 1 de febrero<br>
+        <strong>Fecha límite de inscripción:</strong> 10 de febrero de 2026
+      </p>
 
-<label>Nombre completo
-<input type="text" name="Nombre" required></label>
+      <h3>Forma de pago</h3>
+      <p>
+        Consignación bancaria:<br>
+        <strong>Banco:</strong> Bancolombia<br>
+        <strong>Cuenta de ahorros:</strong> 18060891989<br>
+        <strong>NIT:</strong> 900976504-3<br>
+        <strong>Titular:</strong> Exarcado Maronita Santa Rafqa de Colombia
+      </p>
 
-<label>País
-<input type="text" name="País" required></label>
+      <p class="muted" style="margin-bottom:0">
+        Recomendación: conserva el comprobante de pago para adjuntarlo si te lo solicitan.
+      </p>
+    </div>
 
-<label>Ciudad
-<input type="text" name="Ciudad" required></label>
+    <div class="card">
+      <h2>Expositores</h2>
+      <div class="grid">
+        <div>
+          <img src="padre_estefano.jpg" class="speaker" alt="Padre Estéfano">
+          <p><strong>Padre Estéfano</strong><br>Sacerdote católico maronita – Teólogo</p>
+        </div>
+        <div>
+          <img src="carlos_corredor.jpg" class="speaker" alt="Carlos Corredor">
+          <p><strong>Carlos Corredor</strong><br>Teólogo – Historiador</p>
+        </div>
+        <div>
+          <img src="alejandra_alba.jpg" class="speaker" alt="Alejandra Alba">
+          <p><strong>Alejandra Alba</strong><br>Historiadora – Estudios socioculturales</p>
+        </div>
+      </div>
+    </div>
 
-<label>Correo electrónico
-<input type="email" name="Email" required></label>
+    <div class="card" id="registro">
+      <h2>Formulario de inscripción</h2>
 
-<label>Teléfono
-<input type="tel" name="Teléfono" required></label>
+      <!-- Mensaje de éxito (se activa con ?ok=1) -->
+      <div id="successBox" class="success" style="display:none">
+        ✅ ¡Inscripción enviada! En breve te contactarán para los siguientes pasos.
+      </div>
 
-<button class="btn" type="submit">Enviar inscripción</button>
-</form>
-</div>
+      <form action="https://formsubmit.co/jovenesdesancharbel@gmail.com" method="POST">
+        <input type="hidden" name="_subject" value="Inscripción Volver a las Fuentes">
+        <input type="hidden" name="_captcha" value="false">
 
-<div class="footer card">
-Al enviar este formulario aceptas el tratamiento de tus datos personales conforme a la legislación vigente.
-</div>
+        <!-- Anti-spam (honeypot): si un bot lo llena, se descarta -->
+        <input type="text" name="_honey" style="display:none">
 
-</div>
+        <!-- Volver a esta misma página mostrando mensaje de éxito -->
+        <input type="hidden" name="_next" value="https://exarcadomaronitacolombia.github.io/volver-fuentes/?ok=1#registro">
+
+        <label>Nombre completo
+          <input type="text" name="Nombre" required autocomplete="name" maxlength="120">
+        </label>
+
+        <label>País
+          <input type="text" name="País" required autocomplete="country-name" maxlength="80">
+        </label>
+
+        <label>Ciudad
+          <input type="text" name="Ciudad" required autocomplete="address-level2" maxlength="80">
+        </label>
+
+        <label>Correo electrónico
+          <input type="email" name="Email" required autocomplete="email" maxlength="120">
+        </label>
+
+        <label>Teléfono (WhatsApp)
+          <input type="tel" name="Teléfono" required autocomplete="tel" maxlength="40"
+                 placeholder="+57 3XX XXX XXXX">
+        </label>
+
+        <button class="btn" type="submit">Enviar inscripción</button>
+      </form>
+
+      <p class="muted" style="margin-top:10px;margin-bottom:0">
+        ¿Prefieres inscribirte por WhatsApp?
+        <a class="muted" target="_blank" rel="noopener"
+           href="https://wa.me/573154485881?text=Hola%20Laura,%20quiero%20inscribirme%20al%20curso%20Volver%20a%20las%20Fuentes.%20%C2%BFMe%20ayudas%20por%20favor%3F">
+          Escríbeme aquí.
+        </a>
+      </p>
+    </div>
+
+    <div class="footer card">
+      Al enviar este formulario aceptas el tratamiento de tus datos personales conforme a la legislación vigente.
+    </div>
+
+  </div>
+
+  <script>
+    // Muestra mensaje de éxito si vuelves con ?ok=1
+    (function () {
+      try {
+        var params = new URLSearchParams(window.location.search);
+        if (params.get("ok") === "1") {
+          var box = document.getElementById("successBox");
+          if (box) box.style.display = "block";
+        }
+      } catch (e) {}
+    })();
+  </script>
 </body>
 </html>
